@@ -12,16 +12,28 @@
 
 ## Una vez instalado Termux y dentro de Termux (seguir pasos)
 
-### Para descargar los paquetes necesarios de Termux:
+### Primer paso:
 ```console
-~ $ sh tfg-sycl-android/scripts/termux/paquetes_termux.sh
+~ $ pkg update
+~ $ pkg upgrade
+~ $ pkg i -y git
 ```
 
----
+En caso de no tener un mirror disponible, utilizar el siguiente comando, seleccionar un mirror manualmente y volver a utilizar los comandos de arriba.
+```console
+~ $ termux-change-repo
+```
 
 ### Para clonar este repositorio:
 ```console
 ~ $ git clone https://github.com/JaGine/tfg-sycl-android.git
+```
+
+---
+
+### Para descargar los paquetes necesarios de Termux:
+```console
+~ $ sh tfg-sycl-android/scripts/termux/paquetes_termux.sh
 ```
 
 ---
