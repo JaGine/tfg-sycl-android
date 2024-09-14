@@ -11,6 +11,7 @@ unsigned int img_width = 1920;
 unsigned int img_height = 1080;
 unsigned int num_pixels = img_width*img_height; // 12484800
 unsigned int img_size = num_pixels * 3;
+unsigned int local_size = 128;
 
 static void ReportTime(const std::string &msg, event e) {
   unsigned long time_start =
