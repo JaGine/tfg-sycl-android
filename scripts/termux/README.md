@@ -12,16 +12,16 @@
 
 ## Una vez instalado Termux y dentro de Termux (seguir pasos)
 
-### Para clonar este repositorio:
+### Para descargar los paquetes necesarios de Termux:
 ```console
-~ $ git clone https://github.com/JaGine/tfg-sycl-android.git
+~ $ sh tfg-sycl-android/scripts/termux/paquetes_termux.sh
 ```
 
 ---
 
-### Para descargar los paquetes necesarios de Termux:
+### Para clonar este repositorio:
 ```console
-~ $ sh tfg-sycl-android/scripts/termux/paquetes_termux.sh
+~ $ git clone https://github.com/JaGine/tfg-sycl-android.git
 ```
 
 ---
