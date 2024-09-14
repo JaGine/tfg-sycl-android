@@ -114,9 +114,9 @@ void convolution(cl::sycl::queue& q,
         sumR = sumR < 0 ? 0 : sumR;
         sumG = sumG < 0 ? 0 : sumG;
         sumB = sumB < 0 ? 0 : sumB;
-        acc_out[i  ] = sumR > 255 ? 255 : sumR; // dst_image[(row*num_cols) + col]
-        acc_out[i+1] = sumG > 255 ? 255 : sumG; // dst_image[(row*num_cols) + col + 1]
-        acc_out[i+2] = sumB > 255 ? 255 : sumB; // dst_image[(row*num_cols) + col + 2]
+        acc_out[(row*num_cols) + col ] = sumR > 255 ? 255 : sumR; // dst_image[(row*num_cols) + col]
+        acc_out[(row*num_cols) + col+1] = sumG > 255 ? 255 : sumG; // dst_image[(row*num_cols) + col + 1]
+        acc_out[(row*num_cols) + col+2] = sumB > 255 ? 255 : sumB; // dst_image[(row*num_cols) + col + 2]
       });
     });
     q.wait_and_throw();
@@ -187,7 +187,7 @@ int main(int argc, char* argv[])
   }
   for(int i = 0; i < filter_width*filter_width; i++) {
       if(filter[i] != acc_filter[i]){
-          cout << "Error al copiar el filtro\n";
+          std::cout << "Error al copiar el filtro\n";
           return -1;
       }
   }

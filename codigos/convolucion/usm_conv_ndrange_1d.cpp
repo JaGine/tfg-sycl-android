@@ -187,7 +187,7 @@ int main(int argc, char* argv[])
   }
   for(int i = 0; i < filter_width*filter_width; i++) {
       if(filter[i] != acc_filter[i]){
-          cout << "Error al copiar el filtro\n";
+          std::cout << "Error al copiar el filtro\n";
           return -1;
       }
   }
